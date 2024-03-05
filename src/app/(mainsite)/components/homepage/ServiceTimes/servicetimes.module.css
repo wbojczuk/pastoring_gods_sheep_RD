@@ -1,0 +1,123 @@
+.serviceTimes{
+    display: flex;
+    border: 8px solid var(--primary-color);
+    padding: 0 8vw;
+}
+
+.serviceTimes h2{
+    font-size: 4rem;
+    line-height: 125%;
+    padding-right: 5vw;
+}
+
+.contentWrapper:nth-child(2){
+    border-left: 8px solid var(--primary-color);
+    border-right: 8px solid var(--primary-color);
+}
+
+.contentWrapper{
+    padding: 2vw;
+}
+
+.contentWrapper h4{
+    font-size: 1.8rem;
+    font-weight:600;
+}
+
+.timesWrapper{
+    padding: 0.4vw 0 0 0;
+    display: flex;
+    gap: 4vw
+}
+
+.time{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.time h5{
+    font-size: 3rem;
+}
+
+.time span{
+    font-size: 1.2rem;
+}
+
+/* TABLET AND LOWER STYLES */
+@media only screen and (max-width: 990px){
+    .serviceTimes{
+        display: flex;
+        border: 8px solid var(--primary-color);
+        padding: 0 2vw;
+    }
+    
+    .serviceTimes h2{
+        font-size: 4rem;
+        line-height: 125%;
+        padding-right: 2vw;
+    }
+}
+
+/* TABLET STYLES */
+@media only screen and (min-width: 650px) and (max-width: 990px){
+ 
+}
+ 
+/* MOBILE STYLES */
+@media only screen and (max-width: 649px){
+    .serviceTimes{
+        display: flex;
+        border: 8px solid var(--primary-color);
+        padding: 0 8vw;
+        flex-direction: column;
+        gap: 6vw
+    }
+    .serviceTimes h2{
+        text-align: center;
+    }
+    
+    .contentWrapper:nth-child(2), .contentWrapper:nth-child(3){
+        border-left: 8px solid var(--primary-color);
+        border-right: none;
+        padding-left:6vw;
+    }
+
+    .contentWrapper:nth-child(3){
+        margin-bottom: 8vw;
+    }
+    
+    .contentWrapper:nth-child(1){
+        padding: 0;
+        padding-top: 4vw;
+        
+    }
+    
+    .contentWrapper h4{
+        font-size: 1.8rem;
+        font-weight:600;
+    }
+    
+    .timesWrapper{
+        padding: 0.4vw 0 0 0;
+        
+        display: flex;
+        gap: 4vw
+    }
+    
+    .time{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .time h5{
+        font-size: 3rem;
+    }
+    
+    .time span{
+        font-size: 1.2rem;
+    }
+}

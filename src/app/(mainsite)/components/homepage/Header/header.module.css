@@ -1,0 +1,144 @@
+.header{
+    padding: calc(var(--section-padding-top) * 3) 10%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h1{
+    color: var(--secondary-text-color);
+    font-weight: 600;
+    font-size: 6.5rem;
+    line-height: 125%;
+}
+
+.header h1 span{
+    color: var(--primary-color-2);
+    background-color: var(--primary-color);
+    padding: 0.2vw 1vw;
+    font-size: 5rem;
+}
+
+.content{
+    width: 40%;
+}
+
+.header p{
+    margin-top: 4vw;
+    font-size: 1.2rem;
+    color: var(--secondary-text-color);
+    line-height: 200%;
+}
+
+.buttonWrapper{
+    /* padding: 2vw 5%; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttonWrapper a{
+    margin: 2vw 0;
+    padding: 0.8vw 2vw;
+    display: inline-block;
+    width: 35%;
+    text-align: center;
+}
+
+/* SMALL LAPTOP STYLES */
+@media only screen and (min-width: 991px) and (max-width: 1400px){
+    .content:nth-child(1){
+        width: 50%;
+    }
+    .content:nth-child(2){
+        width: 45%;
+    }
+}
+
+/* TABLET AND LOWER STYLES */
+@media only screen and (max-width: 990px){
+    .header{
+        flex-direction: column;
+    }
+    
+    .header h1{
+
+        text-align: center;
+    }
+    
+    .header h1 span{
+        color: var(--primary-color-2);
+        background-color: var(--primary-color);
+        padding: 0.2vw 1vw;
+        font-size: 5rem;
+    }
+    
+    .content{
+        width: 80%;
+    }
+    
+    .header p{
+        margin-top: 4vw;
+        padding: 0 3vw;
+        text-align: center;
+    }
+    
+    .buttonWrapper{
+        padding: 2vw 10%;
+        width: 80%;
+        display: inline-flex;
+    }
+    
+    .buttonWrapper a{
+        margin: 2vw 0;
+        padding: 1.4vw 3vw;
+        width: 35%;
+        text-align: center;
+    }
+}
+
+/* TABLET STYLES */
+@media only screen and (min-width: 650px) and (max-width: 990px){
+ 
+}
+ 
+/* MOBILE STYLES */
+@media only screen and (max-width: 649px){
+    .header{
+        padding: calc(var(--section-padding-top) * 3) 5%;
+    }
+    .header h1{
+        font-size: 6.5rem;
+    }
+    
+    .header h1 span{
+        color: var(--primary-color-2);
+        background-color: var(--primary-color);
+        padding: 0.2vw 1vw;
+        font-size: 5rem;
+    }
+    
+    .content{
+        width: 100%;
+    }
+    
+    
+    .header p{
+        margin-top: 6vw;
+        font-size: 1.4rem;
+        padding: 0 2vw;
+    }
+    
+    .buttonWrapper{
+        padding: 4vw 0;
+        width: 100%;
+    }
+    
+    .buttonWrapper a{
+        margin: 4vw 0;
+        padding: 2.5vw 4vw;
+        width: 40%;
+    }
+}

@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.content}>
 
-        <Image src="/img/logo.png" width={512} height={512} className={styles.logo} alt="Main Logo"/>
+        <span className={styles.logoText}>Pastoring God's Sheep</span>
 
         <div className={styles.links}>
           <aside>
@@ -19,6 +19,9 @@ export default function Footer() {
                 
                 <li className={styles.listItem}>
                   <Link href="/">Home</Link>
+                </li>
+                <li className={styles.listItem}>
+                  <Link href="/visit">Visit</Link>
                 </li>
                 <li className={styles.listItem}>
                   <Link href="/about">About</Link>
@@ -30,7 +33,7 @@ export default function Footer() {
               </ul>
             </aside>
 
-            <aside>
+            {/* <aside>
               <h3 className={styles.listTitle}>Categories</h3>
               <ul className={styles.list}>
 
@@ -39,7 +42,7 @@ export default function Footer() {
                 <span className={styles.listItem}>Category</span>
               
               </ul>
-            </aside>
+            </aside> */}
 
             <aside>
               <h3 className={styles.listTitle}>Contact</h3>

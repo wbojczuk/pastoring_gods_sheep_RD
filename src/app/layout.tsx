@@ -16,7 +16,7 @@ import Script from 'next/script';
 import "./(mainsite)/components/styling_sheets/links/mainlink.css"
 
 
-const primaryFont = Poppins({ subsets: ['latin'], weight: ["100", "300", "400", "500", "900"], display: "swap", variable: "--primary-font" })
+const primaryFont = Poppins({ subsets: ['latin'], weight: ["100", "300", "400", "500", "600", "700", "800", "900"], display: "swap", variable: "--primary-font" })
 const secondaryFont = Lora({ subsets: ['latin'], weight: ["400", "500", "600", "700"], display: "swap", variable: "--secondary-font" })
 
 export const metadata: Metadata = {

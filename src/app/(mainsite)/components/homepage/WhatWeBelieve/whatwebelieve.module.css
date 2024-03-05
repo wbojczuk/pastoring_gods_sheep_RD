@@ -1,0 +1,101 @@
+.WhatWeBelieve{
+    position: relative;
+    padding: var(--section-padding);
+    /* margin: var(--section-padding); */
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6vw 5vw;
+    width: 80%;
+    border: 15px solid var(--primary-color-2);
+}
+
+.content h2{
+    padding-left: 10%;
+    width: 35%;
+    font-size: 6rem;
+}
+
+.content h2 span{
+    position: relative;
+}
+
+.content h2 span::after{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    bottom:0;
+    left:0;
+    width: 100%;
+    height: 10px;
+    background-color: var(--primary-color);
+}
+
+.content p{
+    width: 40%;
+    padding-right: 5%;
+    font-size: 1.4rem;
+    line-height: 200%;
+}
+
+/* SMALL LAPTOP STYLES */
+@media only screen and (min-width: 991px) and (max-width: 1400px){
+    .content h2{
+        padding-left: 5%;
+        width: 45%;
+    }
+}
+
+/* TABLET AND LOWER STYLES */
+@media only screen and (max-width: 990px){
+    .content{
+        width: 90%;
+    }
+    
+    .content h2{
+        padding-left: 5%;
+        width: 45%;
+        font-size: 5rem;
+    }
+    
+    .content p{
+        width: 40%;
+        padding-right: 5%;
+        font-size: 1.3rem;
+    }
+}
+
+/* TABLET STYLES */
+@media only screen and (min-width: 650px) and (max-width: 990px){
+ 
+}
+ 
+/* MOBILE STYLES */
+@media only screen and (max-width: 649px){
+
+.content{
+    flex-direction: column;
+    justify-content: center;
+    padding: 6vw 5vw;
+    width: 80%;
+    border: 15px solid var(--primary-color-2);
+}
+
+.content h2{
+    padding-left: 5%;
+    width: 90%;
+    /* text-align: center; */
+    font-size: 6rem;
+}
+
+.content p{
+    padding-top: 6vw;
+    width: 80%;
+    font-size: 1.5rem;
+}
+}

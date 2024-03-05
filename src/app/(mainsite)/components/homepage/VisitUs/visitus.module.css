@@ -1,0 +1,28 @@
+.visitUs{
+    position: relative;
+    padding: 2vw 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.visitUs h3{
+    font-size: 4rem;
+    color: var(--secondary-text-color);
+    text-shadow: -4px 4px 0 #000;
+}
+
+/* MOBILE STYLES */
+@media only screen and (max-width: 649px){
+    .visitUs{
+        padding: 4vw 10vw;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 3vw
+    }
+    
+    .visitUs h3{
+        font-size: 4rem;
+    }
+}
