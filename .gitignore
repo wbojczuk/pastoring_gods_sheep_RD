@@ -8,7 +8,8 @@
 # testing
 /coverage
 
-# /fordev
+/fordev
+
 
 # next.js
 /.next/
