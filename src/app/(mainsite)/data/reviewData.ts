@@ -1,3 +1,5 @@
+import { reviewType } from "../../../../globals"
+
 const reviewData: reviewType[] = [
     {
         name: "Johnny Appleseed",
