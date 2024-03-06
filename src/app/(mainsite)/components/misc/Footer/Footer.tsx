@@ -24,10 +24,10 @@ export default function Footer() {
                   <Link href="/visit">Visit</Link>
                 </li>
                 <li className={styles.listItem}>
-                  <Link href="/about">About</Link>
+                  <Link href="/contact">Contact</Link>
                 </li>
                 <li className={styles.listItem}>
-                  <Link href="/contact">Contact</Link>
+                  <Link href="/donate">Donate</Link>
                 </li>
 
               </ul>

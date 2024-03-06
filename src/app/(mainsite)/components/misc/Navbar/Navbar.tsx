@@ -21,7 +21,7 @@ export default function Navbar() {
   // ****************** Add NAV OPTION REFS HERE ******************
 
   const homeRef: any = useRef()
-  const aboutRef: any = useRef()
+  const donateRef: any = useRef()
   const contactRef: any = useRef()
   const visitRef: any = useRef()
 
@@ -36,8 +36,8 @@ export default function Navbar() {
 
   const currentPageTriggers = [
     {
-      triggers: ["/about"],
-      ref: aboutRef
+      triggers: ["/donate"],
+      ref: donateRef
     },
     {
       triggers: ["/contact"],
@@ -199,19 +199,16 @@ export default function Navbar() {
           />
 
           <NavOption
-          title="About"
-          url="/about"
-          ref={aboutRef}
-          />
-
-          <NavOption
           title="Contact"
           url="/contact"
           ref={contactRef}
           />
-
           
-          
+          <NavOption
+          title="Donate"
+          url="/donate"
+          ref={donateRef}
+          />
           
 
           </ul>
