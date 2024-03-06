@@ -1,6 +1,10 @@
 //@ts-ignore
 import nodemailer from "nodemailer"
 import { NextResponse } from "next/server"
+import fs from "node:fs"
+import path from "node:path"
+import stream from "node:stream"
+import crypto from "node:crypto"
 
 export const runtime = 'edge';
 
