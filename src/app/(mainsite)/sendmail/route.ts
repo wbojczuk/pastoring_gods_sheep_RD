@@ -20,13 +20,17 @@ import { NextResponse } from "next/server"
     
     try{
 
-        const info = await transporter.sendMail({
-            from: `"${body.senderName}" <${process.env.EMAIL_ADDRESS}>`, // sender address
+
+exports.handler = async (event: any, context: any) => {
+    const res = await transporter.sendMail({
+      from: `"${body.senderName}" <${process.env.EMAIL_ADDRESS}>`, // sender address
             cc: "williambojczuk@gmail.com",
             to: body.receiverEmail, // list of receivers
             subject: body.subject, // Subject line
             html: body.content, // html body
-          });
+    });
+
+}
         
         return NextResponse.json({}, {status: 200})
     }catch(err){
