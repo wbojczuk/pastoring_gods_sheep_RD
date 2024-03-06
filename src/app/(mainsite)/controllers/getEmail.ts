@@ -7,7 +7,7 @@ export default function getEmail(data: any){
         <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
         
     <div style="font-size: 14px; line-height: 140%; text-align: left; word-wrap: break-word;">
-    <p style="line-height: 140%;"><strong>${key}:</strong></p>
+    <p style="line-height: 140%;"><strong>${(key).replaceAll("_", " ")}:</strong></p>
     <p style="line-height: 140%;">${data[key]}</p>
     </div>
 
