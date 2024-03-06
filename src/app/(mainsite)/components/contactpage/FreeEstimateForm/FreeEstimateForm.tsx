@@ -1,9 +1,10 @@
 "use client"
 // import PhoneNumber from "./PhoneNumber/PhoneNumber"
 import { useRef, useState } from "react"
-import handleFormSubmit from "./handleFormSubmit"
 import "./freeestimateform.css"
 import MessageStatus from "../MessageStatus/MessageStatus"
+import sendEmail from "@/app/(mainsite)/controllers/sendEmail"
+import getEmail from "@/app/(mainsite)/controllers/getEmail"
 
 export default function FreeEstimateForm() {
 
@@ -14,29 +15,35 @@ export default function FreeEstimateForm() {
   return (
     <>
     <MessageStatus status={status} setStatus={setStatus}/>
-    <form ref={formRef} id="estimateForm" onSubmit={(evt)=>{handleFormSubmit(evt, setStatus, formRef)}}>
-        <input type="hidden" name="_subject" value="New message from website"/>
-        <input type="hidden" name="_captcha" value="false"/>
+    <form ref={formRef} id="estimateForm" onSubmit={(evt)=>{
+        sendEmail(evt, setStatus, {
+            senderName: "Rome Digital Delivery System",
+            receiverEmail: "williambojczuk@gmail.com",
+            recieverName: "William Boys",
+            subject: "You recieved a submission!",
+            content: getEmail(Object.fromEntries(new FormData(formRef.current)))
+        })
+    }}>
 
         {/* START FIELDS */}
             
         <h2 id="estimateFormTitle">Contact Us</h2>
             <div className="input-wrapper">
                 <img width={200} height={200} id="formPersonIcon" src={"/icons/person.svg"} alt="Person Icon" />
-                <input required type="text" name="name" id="nameInput" placeholder={"Name"} />
+                <input required type="text" name="Name" id="nameInput" placeholder={"Name"} />
             </div>
             
             <div className="input-wrapper">
                 <img width={200} height={200} id="formPhoneIcon" src={"/icons/phone.svg"} alt="Phone Icon" />
-                <input required type="text" name="phoneNumber" id="phoneNumberInput" placeholder={"Phone Number"} />
+                <input required type="text" name="Phone_Number" id="phoneNumberInput" placeholder={"Phone Number"} />
             </div>
             <div className="input-wrapper">
                 <img width={200} height={200} id="formEmailIcon" src={"/icons/email.svg"} alt="Email Icon" />
-                <input required type="email" name="email" id="emailInput" placeholder={"Email Address"} />
+                <input required type="email" name="Email" id="emailInput" placeholder={"Email Address"} />
             </div>
 
             <div className="input-wrapper">
-                <textarea required maxLength={2000} name="details" id="messageInput" placeholder={"Your message..."}></textarea>
+                <textarea required maxLength={2000} name="Details" id="messageInput" placeholder={"Your message..."}></textarea>
             </div>
             
             <div className="center">
