@@ -1,22 +1,23 @@
 interface sendEmailParams{
-    senderName: string,
     receiverEmail: string,
-    subject: string,
     recieverName: string,
-    content: string 
+    data: any 
 }
 
-export default async function sendEmail(evt:any,setStatus:any, props: sendEmailParams){
+export default async function sendEmail(evt:any,setStatus:any, props: sendEmailParams, formElem: HTMLFormElement){
     evt.preventDefault();
     setStatus("loading")
     try{
-        await fetch("/api/sendmail",{
+        await fetch("https://wbojczukblog.alwaysdata.net/api/sendformemail",{
             method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+              },
             body: JSON.stringify({
-                senderName: props.senderName,
                 receiverEmail: props.receiverEmail,
-                subject: props.subject,
-                content: props.content
+                recieverName: props.recieverName,
+                websiteURL: encodeURIComponent(location.origin),
+                data: props.data
             })
         })
     }catch(err){
@@ -25,6 +26,7 @@ export default async function sendEmail(evt:any,setStatus:any, props: sendEmailP
         return false
     }finally{
         setStatus("success")
+        formElem.reset()
         return true
     }
 }

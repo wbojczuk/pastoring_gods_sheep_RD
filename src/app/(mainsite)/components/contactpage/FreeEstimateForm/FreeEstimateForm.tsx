@@ -3,7 +3,6 @@ import { useRef, useState } from "react"
 import "./freeestimateform.css"
 import MessageStatus from "../MessageStatus/MessageStatus"
 import sendEmail from "@/app/(mainsite)/controllers/sendEmail"
-import getEmail from "@/app/(mainsite)/controllers/getEmail"
 
 export default function FreeEstimateForm() {
 
@@ -16,12 +15,10 @@ export default function FreeEstimateForm() {
     <MessageStatus status={status} setStatus={setStatus}/>
     <form ref={formRef} id="estimateForm" onSubmit={(evt)=>{
         sendEmail(evt, setStatus, {
-            senderName: "Rome Digital Delivery System",
-            receiverEmail: "williambojczuk@gmail.com",
-            recieverName: "William Boys",
-            subject: "You recieved a submission!",
-            content: getEmail(Object.fromEntries(new FormData(formRef.current)))
-        })
+            receiverEmail: process.env.NEXT_PUBLIC_EMAIL_ADDRESS!,
+            recieverName: process.env.NEXT_PUBLIC_EMAIL_RECIEVER!,
+            data: Object.fromEntries(new FormData(formRef.current))
+        }, formRef.current)
     }}>
 
         {/* START FIELDS */}
