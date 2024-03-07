@@ -16,7 +16,7 @@ export default function Header() {
 
             <div className={styles.buttonWrapper}>
                 <Link className="main-link" href="/visit">Join Us</Link>
-                <a style={{backgroundColor: "var(--primary-color)", color: "var(--secondary-text-color)"}} href="#" className="main-link">Watch Online</a>
+                <a style={{backgroundColor: "var(--primary-color)", color: "var(--secondary-text-color)"}} href="https://www.youtube.com/playlist?list=PL8YJJ6ITG6Q7NPeHNY3aRlswnK_YfJsJP" target="_blank" className="main-link">Watch Online</a>
             </div>
         </div>
 
