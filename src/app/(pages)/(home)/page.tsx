@@ -11,9 +11,9 @@ export default function Home() {
     <>
       <Header />
       <ServiceTimes />
-      <Welcome imgSrc="/img/cross.png" />
+      <Welcome imgSrc="/img/cross.webp" />
       <WhatWeBelieve />
-      <Pastor imgSrc="/img/pastor.jpeg" />
+      <Pastor imgSrc="/img/pastor.webp" />
       <VisitUs />
       <FAQ />
     </>

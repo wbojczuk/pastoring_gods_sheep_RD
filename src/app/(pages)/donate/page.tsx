@@ -11,7 +11,7 @@ export default function DonatePage(){
     return(
         <>
             <PageTitle pageTitle="Donate" />
-            <DonateContent imgSrc="/img/grapes.png" />
+            <DonateContent imgSrc="/img/grapes.webp" />
         </>
     )
 }

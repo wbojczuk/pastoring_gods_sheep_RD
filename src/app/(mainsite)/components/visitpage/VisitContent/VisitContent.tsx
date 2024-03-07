@@ -12,7 +12,7 @@ export default function VisitContent() {
         </div>
         <div className={styles.imgWrapper}>
             <div className={styles.imgContainer}>
-                <img src="/img/location.png" alt="Image of church's location" />
+                <img src="/img/location.webp" alt="Image of church's location" />
             </div>
         </div>
     </section>
