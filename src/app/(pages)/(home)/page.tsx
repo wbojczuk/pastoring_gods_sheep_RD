@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <ServiceTimes />
+      {/* <ServiceTimes /> */}
       <Welcome imgSrc="/img/cross.webp" />
       <WhatWeBelieve />
       <Pastor imgSrc="/img/pastor.webp" />

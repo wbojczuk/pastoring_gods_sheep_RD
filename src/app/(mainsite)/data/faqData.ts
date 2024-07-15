@@ -7,7 +7,7 @@ const faqData: faqType[] = [
     },
     {
         question: "What is Pastoring God's Sheep?",
-        answer: `Pastoring God's Sheep is a Christian Talk Show hosted by Timothy Baden at Charity Christian Church`
+        answer: `Pastoring God's Sheep is a Christian Talk Show hosted by Timothy Baden`
     }
 ]
 
